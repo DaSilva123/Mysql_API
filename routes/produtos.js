@@ -9,8 +9,13 @@ router.get('/', (req, res, next) =>{
 });
 
 router.post('/', (req, res, next)=>{
+    const protudo = {
+        nome:req.body.nome,
+        preco:req.body.preco
+    }
     res.status(201).send({
-        mensagem: 'Usando o POST dentro da rota' 
+        mensagem: 'Insere um produto',
+        protudoCriado:protudo 
     });
 });
 
